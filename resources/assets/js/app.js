@@ -19,18 +19,6 @@ const app = new Vue({
     el: '#app'
 });
 
-
-var animals = require('./animal');
-var gossos = require('./dog');
-var gats = require('./cat');
-
-//
-//     And this is how your scenario plays out:
-
-var cat = new gats.Cat();
-var dog = new gossos.Dog();
-
-cat.eat();
-dog.eat();
-cat.say();
-dog.say();
+//jQuery.ajax(); Executa un XHR de JS utilitzant jquery
+//http://api.jquery.com/jquery.ajax/
+$.ajax();
