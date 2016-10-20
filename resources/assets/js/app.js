@@ -42,3 +42,24 @@ $("#getuser").click(function () {
     });
 });
 
+$("#postuser").click(function () {
+    $.ajax({
+       type: "POST",
+       data: {name : $("#userpost").val()},
+       url: 'http://localhost:8000/apicutre/user/1',
+       success: function (result) {
+           console.log("Ajax ok!");
+           console.log(result);
+       },
+       error: function () {
+           console.log("Ha petat petició ajax")
+       }
+   })
+});
+
+$.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+});
+

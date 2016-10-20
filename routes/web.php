@@ -11,11 +11,16 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/apicutre/user/1', function () {
-    abort(500);
+    //abort(500);
     return "Usuari 1";
+});
+
+Route::post('/apicutre/user/1',function (){
+    return $_POST['name'];
 });
